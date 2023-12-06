@@ -116,7 +116,7 @@ const Home = () => {
             bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
             css={{ backdropFilter: 'blur(10px)' }}
           >
-            Hello, I&apos;m Yến Chu Nè
+            Konichiwa, I&apos;m Chinh nè
           </Box>
 
           <Box display={{ md: 'flex' }}>
