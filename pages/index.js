@@ -8,7 +8,6 @@ import {
   List,
   ListItem,
   useColorModeValue,
-  chakra,
   Modal,
 
   ModalContent,
@@ -25,8 +24,6 @@ import {
 import { EmailIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { IoLogoInstagram, IoLogoFacebook, IoLogoTiktok, } from 'react-icons/io5'
-import Image from 'next/image'
 
 
 import { useState } from 'react';
@@ -67,19 +64,17 @@ const FullScreenImage = ({ src, alt }) => {
   );
 };
 
-const ProfileImage = chakra(Image, {
-  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
-})
+
 
 const Home = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const toast = useToast()
   const handleClick = () => {
-    const phoneNumber = '0868943096';
+    const phoneNumber = '0111166666689';
     navigator.clipboard.writeText(phoneNumber);
     toast({
       title: 'Đã copy',
-      description: "0868943096",
+      description: "0111166666689",
       status: 'success',
       duration: 1000,
       isClosable: true,
@@ -188,34 +183,7 @@ const Home = () => {
                   </Button>
                 </Link>
               </ListItem>
-              <ListItem>
-                <Link target="_blank">
-                  <Button
-                    variant="ghost"
-                    colorScheme="teal"
 
-                  >
-                    <span className="chakra-button__icon css-1wh2kri">
-
-                      <img
-                        alt=""
-                        aria-hidden="true"
-                        focusable="false"
-                        loading="lazy"
-                        width={20}
-                        height={20}
-                        decoding="async"
-                        data-nimg={1}
-                        style={{ color: "transparent" }}
-                        srcSet="https://img.cake.vn/2021/09/e166aa95-z2434192104284_4a91929db3363e3c43118490fcbe922f.jpg"
-                        src="https://img.cake.vn/2021/09/e166aa95-z2434192104284_4a91929db3363e3c43118490fcbe922f.jpg"
-                      />
-                    </span>
-
-                    Cake Bank
-                  </Button>
-                </Link>
-              </ListItem>
               <ListItem>
                 <Link target="_blank">
                   <Button
